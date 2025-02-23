@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(213, 70, 70);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        h1{
+            margin-bottom: 150px;
+        }
+        button{
+            display: block;
+            padding: 10px 20px;
+            background-color: blue;
+            font-size: 30px;
+            margin-top: 150px;
+        }
+        input{
+            padding: 20px 100px;
+            font-size: 20px;
+            border: black 2px solid;
+        }
+        p{
+            font-size: 40px;
+            margin-top: 50px;
+            background-color: yellowgreen;
+            padding: 0px 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Type a world in the box</h1>
+    <input type="text" name="" id="word">
+    <p id="length"></p>
+    <button onclick="CalculateLength()">Click to calculate word length</button>
+    
+    <script>
+        function CalculateLength(){
+            let words = document.getElementById("word").value;
+            document.getElementById("length").innerHTML = words.length;
+        }
+    </script>
+</body>
+</html>

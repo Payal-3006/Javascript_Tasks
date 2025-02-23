@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            margin-top: 80px;
+       }
+        button{
+            display: block;
+            padding: 10px 20px;
+            background-color: lawngreen;
+            font-size: 30px;
+        }
+        p{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="GenerateQuote()">Generate Quote</button>
+    <br>
+    <p id="quote"></p>
+    <p id="author"></p>
+    <script>
+        const quotes = [
+            {quote: "Strive not to be a success, but rather to be a value.", author: "Albert Einstein"},
+            {quote:"The only way to do great work is to love what you do.", author: "Steve Jobs"},
+            {quote:"Be the change that you wish to see in the world.", author: "Mahatma Gandhi"},
+            {quote:"Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill"},
+            {quote:"Belive you can and you're halfway there.", author: "Theodore Roosevelt"},
+        ];
+        function GenerateQuote(){
+            let index = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerHTML = quotes[index].quote ;
+            document.getElementById("author").innerHTML = quotes[index].author;
+        }
+    </script>
+</body>
+</html>
